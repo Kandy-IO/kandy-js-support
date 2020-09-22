@@ -650,21 +650,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@kandy-io/config-emea@workspace:packages/config-emea":
+"@kandy-io/config-emea@workspace:packages/link-config-emea":
   version: 0.0.0-use.local
-  resolution: "@kandy-io/config-emea@workspace:packages/config-emea"
+  resolution: "@kandy-io/config-emea@workspace:packages/link-config-emea"
   languageName: unknown
   linkType: soft
 
-"@kandy-io/config-uae@workspace:packages/config-uae":
+"@kandy-io/config-uae@workspace:packages/link-config-uae":
   version: 0.0.0-use.local
-  resolution: "@kandy-io/config-uae@workspace:packages/config-uae"
+  resolution: "@kandy-io/config-uae@workspace:packages/link-config-uae"
   languageName: unknown
   linkType: soft
 
-"@kandy-io/config-us@workspace:packages/config-us":
+"@kandy-io/config-us@workspace:packages/link-config-us":
   version: 0.0.0-use.local
-  resolution: "@kandy-io/config-us@workspace:packages/config-us"
+  resolution: "@kandy-io/config-us@workspace:packages/link-config-us"
   languageName: unknown
   linkType: soft
 
