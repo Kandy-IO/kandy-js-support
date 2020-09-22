@@ -1,5 +1,16 @@
 {
   "name": "kandy-js",
   "private": true,
-  "workspaces": ["packages/*"]
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "husky": "^4.3.0",
+    "jest": "^26.4.2",
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2",
+    "prettier-standard": "^16.4.1",
+    "snazzy": "^8.0.0",
+    "standard": "^14.3.4"
+  }
 }
