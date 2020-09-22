@@ -4,6 +4,12 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "test": "jest",
+    "format": "prettier-standard --format",
+    "lint": "standard",
+    "verify": "npm-run-all -s test format lint"
+  },
   "devDependencies": {
     "husky": "^4.3.0",
     "jest": "^26.4.2",
