@@ -7,7 +7,7 @@
   "scripts": {
     "test": "jest",
     "format": "prettier-standard --format",
-    "lint": "standard",
+    "lint": "standard | snazzy",
     "verify": "npm-run-all -s test format lint"
   },
   "husky": {
