@@ -1,0 +1,5 @@
+{
+  "name": "kandy-js",
+  "private": true,
+  "workspaces": ["packages/*"]
+}
