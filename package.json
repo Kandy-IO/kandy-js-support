@@ -10,6 +10,14 @@
     "lint": "standard",
     "verify": "npm-run-all -s test format lint"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*": "prettier-standard --lint"
+  },
   "devDependencies": {
     "husky": "^4.3.0",
     "jest": "^26.4.2",
