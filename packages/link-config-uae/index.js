@@ -5,12 +5,12 @@
 const config = {
   authentication: {
     server: {
-      base: 'uae server'
+      base: 'ct-webrtc.etisalat.ae'
     }
   },
   subscription: {
     websocket: {
-      server: 'uae server'
+      server: 'ct-webrtc.etisalat.ae'
     }
   },
   call: {
@@ -19,11 +19,19 @@ const config = {
     serverProvidedTurnCredentials: true,
     iceserver: [
       {
-        url: 'uae turn server',
+        url: 'turns:ct-turn1.etisalat.ae:443?transport=tcp',
         credentials: ''
       },
       {
-        url: 'uae stun server',
+        url: 'turns:ct-turn2.etisalat.ae:443?transport=tcp',
+        credentials: ''
+      },
+      {
+        url: 'stun:ct-turn1.etisalat.ae:3478?transport=udp',
+        credentials: ''
+      }
+      {
+        url: 'stun:ct-turn2.etisalat.ae:3478?transport=udp',
         credentials: ''
       }
     ]
