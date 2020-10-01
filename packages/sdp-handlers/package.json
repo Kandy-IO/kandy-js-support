@@ -1,3 +1,4 @@
 {
-  "name": "@kandy-io/sdp-handlers"
+  "name": "@kandy-io/sdp-handlers",
+  "main": "src/index.js"
 }
