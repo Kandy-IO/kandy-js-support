@@ -1,5 +1,5 @@
 /**
- * Baseline SDK configurations for Link using IOT2.
+ * Baseline SDK configurations for Link US instance.
  * @type {Object}
  */
 const config = {
