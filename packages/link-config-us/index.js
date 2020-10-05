@@ -1,5 +1,5 @@
 /**
- * Default SDK configurations for Link using IOT2.
+ * Baseline SDK configurations for Link using IOT2.
  * @type {Object}
  */
 const config = {
@@ -14,9 +14,6 @@ const config = {
     }
   },
   call: {
-    earlyMedia: false,
-    removeH264Codecs: true,
-    serverProvidedTurnCredentials: true,
     iceserver: [
       {
         url: 'turns:turn-sr2.genband.com:443?transport=tcp',
@@ -27,19 +24,6 @@ const config = {
         credentials: ''
       }
     ]
-  },
-  common: {
-    enableReduxDevTools: true,
-    allowProxy: true
-  },
-  logs: {
-    logLevel: 'debug',
-    logActions: {
-      flattenActions: false,
-      actionOnly: false,
-      exposePayloads: true
-    },
-    enableFcsLogs: true
   }
 }
 

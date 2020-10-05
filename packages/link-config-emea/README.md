@@ -1,5 +1,5 @@
 # link-config-emea
-This is a default configuration for the Kandy SDK.
+This is a baseline configuration for the Kandy SDK.
 Platform: link
 
 ## Usage
