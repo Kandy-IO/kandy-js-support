@@ -1,6 +1,6 @@
 # @kandy-io/link-config-us
 
-This package contains standard configuration for the [Kandy Link JS SDK](https://github.com/Kandy-IO/kandy-link-js-sdk) to connect to the Kandy platform in the UEA region.
+This package contains standard configuration for the [Kandy Link JS SDK](https://github.com/Kandy-IO/kandy-link-js-sdk) to connect to the Kandy platform in the US region.
 
 ## Installation
 
