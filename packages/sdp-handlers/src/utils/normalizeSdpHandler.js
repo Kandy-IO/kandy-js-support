@@ -2,10 +2,10 @@
  * Wraps a SDP Handler to make it compatible for both 3.x and 4.x versions of the SDK
  * @method wrapHandler
  * @param {Function} handler The SDP Handler to wrap.
- * @returns {Function} compatibleHandler The wrapped handler compatible with the 3.x and 4.x SDKs.
+ * @returns {Function} normalizedHandler The normalized handler compatible with the 3.x and 4.x SDKs.
  */
-function wrapHandler (handler) {
-  const compatibleHandler = (...params) => {
+function normalizeSdpHandler (handler) {
+  const normalizedHandler = (...params) => {
     /**
      * Old format (3.x) passes an object to each sdp
      *  handler that contains the current and original SDPs.
@@ -40,7 +40,7 @@ function wrapHandler (handler) {
     return oldCallstack ? params[0].next(newSdp) : newSdp
   }
 
-  return compatibleHandler
+  return normalizedHandler
 }
 
-module.exports = wrapHandler
+module.exports = normalizeSdpHandler
