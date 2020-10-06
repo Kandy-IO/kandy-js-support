@@ -2,8 +2,14 @@
   "name": "@kandy-io/link-config-uae",
   "version": "1.0.0",
   "description": "Kandy.js UAE Configuration",
+  "author": "Jean-Yves Boudreau (jean-yves.boudreau@kandy.io)",
+  "license": "MIT",
   "exports": {
     "require": "./src/index.js",
     "import": "./src/esm/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kandy-io/kandy-js-support.git"
   }
 }
