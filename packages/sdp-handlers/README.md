@@ -1,14 +1,20 @@
 # sdp-handlers
 
-This package contains a collection of SDP Handlers that can be used with the Kandy.js WebRTC SDK to make modifications to the SDP.
+This package contains a collection of SDP Handlers that can be used with the Kandy.js WebRTC SDK to allow applications to make custom modifications to the SDP at different stages.
 
 ## Compatiblity
 
-The handlers are compatible with both the old callstack pipeline (3.x/FCS) and the new callstack pipeline (4.x).
+The SDP handlers in this library are compatible with the 3.x and 4.x versions of the Kandy.js SDK.
 
 ## Installation
 
-Add the package as a dependency in your project:
+Add the package as a dependency in your project using `npm`:
+
+```
+npm install @kandy-io/kandy-js-support
+```
+
+or with `yarn`:
 
 ```
 yarn add @kandy-io/kandy-js-support

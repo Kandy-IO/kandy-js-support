@@ -1,5 +1,4 @@
-// Utils
-const wrapHandler = require('./utils/wrapHandler')
+const normalizeSdpHandler = require('./utils/normalizeSdpHandler')
 
 /**
  * Creates and returns an SDP Handler function that will remove the desired codecs
@@ -23,7 +22,7 @@ function createCodecRemover (codecs) {
   // We allow the user to pass in a codecs of objects or strings, so here we format the strings into objects for uniformity.
   codecs = codecs.map(item => (typeof item === 'string' ? { name: item } : item))
 
-  return wrapHandler(function (newSdp, info, originalSdp) {
+  return normalizeSdpHandler(function (newSdp, info, originalSdp) {
     // This is an array of strings representing codec names we want to remove.
     const codecStringsToRemove = codecs.map(codec => codec.name)
 

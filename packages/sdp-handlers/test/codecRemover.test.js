@@ -1,11 +1,11 @@
 /**
- * This file is for running tests on the returned SDP object from codecRemover()
+ * This file is for running tests on the SDP handler returned from createCodecRemover()
  * we assume payload numbers for the tests sake, that is what the commented numbers are
  */
 const createCodecRemover = require('../src/codecRemover')
 const mockSdp = require('./utils/mockSdp')
 
-// We cant have a function in json so shim it in here so that codecRemover(params) doesnt blow up
+// We cant have a function in JSON so shim it in here so that codecRemover(params) doesnt fail.
 mockSdp.next = function next (sdp) {
   return sdp
 }
