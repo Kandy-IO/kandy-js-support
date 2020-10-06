@@ -1,3 +1,9 @@
 {
-  "name": "@kandy-io/link-config-us"
+  "name": "@kandy-io/link-config-us",
+  "version": "1.0.0",
+  "description": "Kandy.js US Configuration",
+  "exports": {
+    "require": "./src/index.js",
+    "import": "./src/esm/index.js"
+  }
 }
