@@ -1,3 +1,15 @@
 {
-  "name": "@kandy-io/link-config-us"
+  "name": "@kandy-io/link-config-us",
+  "version": "1.0.0",
+  "description": "Kandy.js US Configuration",
+  "author": "Jean-Yves Boudreau (jean-yves.boudreau@kandy.io)",
+  "license": "MIT",
+  "exports": {
+    "require": "./src/index.js",
+    "import": "./src/esm/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kandy-io/kandy-js-support.git"
+  }
 }

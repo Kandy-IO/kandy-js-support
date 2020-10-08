@@ -10,5 +10,10 @@ module.exports = {
       statements: 100
     }
   },
-  projects: ['<rootDir>/packages/sdp-handlers']
+  projects: [
+    '<rootDir>/packages/link-config-emea',
+    '<rootDir>/packages/link-config-uae',
+    '<rootDir>/packages/link-config-us',
+    '<rootDir>/packages/sdp-handlers'
+  ]
 }
