@@ -1,4 +1,3 @@
-const { expect, test } = require('@jest/globals')
 const { config } = require('../src/index')
 
 test('Configuration object test', () => {
