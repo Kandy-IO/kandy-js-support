@@ -11,13 +11,13 @@ The SDP handlers in this library are compatible with Kandy.js version 4.x and ab
 Add the package as a dependency in your project using `npm`:
 
 ```
-npm install @kandy-io/kandy-js-support
+npm install @kandy-io/sdp-handlers
 ```
 
 or with `yarn`:
 
 ```
-yarn add @kandy-io/kandy-js-support
+yarn add @kandy-io/sdp-handlers
 ```
 
 ## Usage
