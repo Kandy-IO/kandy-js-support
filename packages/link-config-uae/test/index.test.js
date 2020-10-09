@@ -1,4 +1,4 @@
-const { config } = require('../src/index')
+import { config } from '../src/index'
 
 test('Configuration object test', () => {
   expect(config).toMatchInlineSnapshot(`

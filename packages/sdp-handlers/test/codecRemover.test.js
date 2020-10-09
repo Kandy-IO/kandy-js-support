@@ -1,19 +1,16 @@
-/**
- * This file is for running tests on the SDP handler returned from createCodecRemover()
- * we assume payload numbers for the tests sake, that is what the commented numbers are
- */
-const createCodecRemover = require('../src/codecRemover')
-const sdp = require('./support/sdp.fixture')
-const { parse: createSdpObject } = require('sdp-transform')
+import { describe, test, expect } from '@jest/globals'
+import { createCodecRemover } from '../src/codecRemover'
+import * as sdp from './support/sdp.fixture'
+import { parse as createSdpObject } from 'sdp-transform'
 
-const { NORMAL, ...EDGE_CASES } = sdp
+const { NORMAL: NORMAL_SDP, ...EDGE_CASES_SDP } = sdp
 
 /**
  * Tests for the codecRemover SDP Handler
  */
 describe('codecRemover SDP Handler', () => {
   test('should return a newSdp of type Object', () => {
-    const dummySdp = createSdpObject(sdp.NORMAL)
+    const dummySdp = createSdpObject(NORMAL_SDP)
     const codecRemover = createCodecRemover()
     const newSdp = codecRemover(dummySdp)
     expect(newSdp).toEqual(expect.any(Object))
@@ -21,7 +18,7 @@ describe('codecRemover SDP Handler', () => {
 
   test('should not filter anything if the codecs parameter is undefined', () => {
     const codecs = undefined
-    const dummySdp = createSdpObject(sdp.NORMAL)
+    const dummySdp = createSdpObject(NORMAL_SDP)
     const codecRemover = createCodecRemover(codecs)
     const newSdp = codecRemover(dummySdp)
     expect(newSdp).toEqual(dummySdp)
@@ -29,7 +26,7 @@ describe('codecRemover SDP Handler', () => {
 
   test('should not remove codecs if no values are passed in', () => {
     const codecs = []
-    const dummySdp = createSdpObject(sdp.NORMAL)
+    const dummySdp = createSdpObject(NORMAL_SDP)
     const codecRemover = createCodecRemover(codecs)
     const newSdp = codecRemover(dummySdp)
     expect(newSdp).toEqual(dummySdp)
@@ -37,7 +34,7 @@ describe('codecRemover SDP Handler', () => {
 
   test('should not remove a codec if specified codec(s) are blank', () => {
     const codecs = ['']
-    const dummySdp = createSdpObject(sdp.NORMAL)
+    const dummySdp = createSdpObject(NORMAL_SDP)
     const codecRemover = createCodecRemover(codecs)
     const newSdp = codecRemover(dummySdp)
     expect(newSdp).toEqual(dummySdp)
@@ -46,7 +43,7 @@ describe('codecRemover SDP Handler', () => {
   test('should remove codec if provided as a of string', () => {
     // ISAC = [103, 104]
     const codecs = ['ISAC']
-    const dummySdp = createSdpObject(sdp.NORMAL)
+    const dummySdp = createSdpObject(NORMAL_SDP)
     const codecRemover = createCodecRemover(codecs)
     const newSdp = codecRemover(dummySdp)
 
@@ -82,7 +79,7 @@ describe('codecRemover SDP Handler', () => {
     // [103, 104, 9, 106, 105, 13]
     const codecs = ['ISAC', 'G722', 'CN']
 
-    const dummySdp = createSdpObject(sdp.NORMAL)
+    const dummySdp = createSdpObject(NORMAL_SDP)
     const codecRemover = createCodecRemover(codecs)
     const newSdp = codecRemover(dummySdp)
 
@@ -117,7 +114,7 @@ describe('codecRemover SDP Handler', () => {
 
   test('should not remove a codec if the name param is empty', () => {
     const codecs = [{ name: '' }]
-    const dummySdp = createSdpObject(sdp.NORMAL)
+    const dummySdp = createSdpObject(NORMAL_SDP)
     const codecRemover = createCodecRemover(codecs)
     const newSdp = codecRemover(dummySdp)
     expect(newSdp).toEqual(dummySdp)
@@ -130,7 +127,7 @@ describe('codecRemover SDP Handler', () => {
         name: 'CN'
       }
     ]
-    const dummySdp = createSdpObject(sdp.NORMAL)
+    const dummySdp = createSdpObject(NORMAL_SDP)
 
     const codecRemover = createCodecRemover(codecs)
     const newSdp = codecRemover(dummySdp)
@@ -172,7 +169,7 @@ describe('codecRemover SDP Handler', () => {
         fmtpParams: []
       }
     ]
-    const dummySdp = createSdpObject(sdp.NORMAL)
+    const dummySdp = createSdpObject(NORMAL_SDP)
     const codecRemover = createCodecRemover(codecs)
     const newSdp = codecRemover(dummySdp)
 
@@ -214,7 +211,7 @@ describe('codecRemover SDP Handler', () => {
         fmtpParams: ['level-asymmetry-allowed=1']
       }
     ]
-    const dummySdp = createSdpObject(sdp.NORMAL)
+    const dummySdp = createSdpObject(NORMAL_SDP)
     const codecRemover = createCodecRemover(codecs)
     const newSdp = codecRemover(dummySdp)
 
@@ -257,7 +254,7 @@ describe('codecRemover SDP Handler', () => {
         fmtpParams: ['notarealfmtpparam=1']
       }
     ]
-    const dummySdp = createSdpObject(sdp.NORMAL)
+    const dummySdp = createSdpObject(NORMAL_SDP)
     const codecRemover = createCodecRemover(codecs)
     const newSdp = codecRemover(dummySdp)
 
@@ -321,7 +318,7 @@ describe('codecRemover SDP Handler', () => {
         fmtpParams: ['profile-level-id=4d0032']
       }
     ]
-    const dummySdp = createSdpObject(sdp.NORMAL)
+    const dummySdp = createSdpObject(NORMAL_SDP)
     const codecRemover = createCodecRemover(codecs)
     const newSdp = codecRemover(dummySdp)
 
@@ -341,7 +338,7 @@ describe('codecRemover SDP Handler', () => {
     expect(payloadList.length).toBe(9)
   })
 
-  test.each(Object.entries(EDGE_CASES))('can handle %p edge case.', (name, edgeCaseSdp) => {
+  test.each(Object.entries(EDGE_CASES_SDP))('can handle %p edge case.', (name, edgeCaseSdp) => {
     const dummySdp = createSdpObject(edgeCaseSdp)
     const codecRemover = createCodecRemover([])
     const newSdp = codecRemover(dummySdp)

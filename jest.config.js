@@ -10,6 +10,7 @@ module.exports = {
       statements: 100
     }
   },
+  transform: { '^.+\\.js$': 'babel-jest' },
   projects: [
     '<rootDir>/packages/link-config-emea',
     '<rootDir>/packages/link-config-uae',

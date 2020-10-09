@@ -4,13 +4,17 @@
   "description": "Kandy.js US Configuration",
   "author": "Jean-Yves Boudreau (jean-yves.boudreau@kandy.io)",
   "license": "MIT",
+  "type": "module",
+  "module": "./src/index.js",
   "exports": {
-    "require": "./src/index.js",
-    "import": "./src/esm/index.js"
+    "import": "./src/index.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/kandy-io/kandy-js-support.git"
+  },
+  "scripts": {
+    "test": "jest"
   },
   "devDependencies": {
     "jest": "^26.4.2"
