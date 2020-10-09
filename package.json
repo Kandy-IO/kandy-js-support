@@ -18,6 +18,11 @@
   "lint-staged": {
     "*": "prettier-standard --lint"
   },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
   "devDependencies": {
     "husky": "^4.3.0",
     "jest": "^26.4.2",

@@ -1,7 +1,10 @@
-const { expect, test } = require('@jest/globals')
-const { exampleHandler } = require('../src/index')
+const { expect } = require('@jest/globals')
+const index = require('../src/index.js')
 
-test('Example test', () => {
-  const result = exampleHandler()
-  expect(result).toBe('sdp')
+test('Exports the correct list of functions', () => {
+  expect(Object.keys(index)).toMatchInlineSnapshot(`
+    Array [
+      "createCodecRemover",
+    ]
+  `)
 })

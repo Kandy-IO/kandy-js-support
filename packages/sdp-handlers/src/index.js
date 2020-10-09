@@ -1,5 +1,6 @@
-function exampleHandler () {
-  return 'sdp'
-}
+// SDP Handlers
+const createCodecRemover = require('./codecRemover')
 
-module.exports = { exampleHandler }
+module.exports = {
+  createCodecRemover
+}
