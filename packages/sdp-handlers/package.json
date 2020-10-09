@@ -12,5 +12,9 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:Kandy-IO/kandy-js-support.git"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2",
+    "sdp-transform": "^2.14.0"
   }
 }

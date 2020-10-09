@@ -653,24 +653,33 @@ __metadata:
 "@kandy-io/link-config-emea@workspace:packages/link-config-emea":
   version: 0.0.0-use.local
   resolution: "@kandy-io/link-config-emea@workspace:packages/link-config-emea"
+  dependencies:
+    jest: ^26.4.2
   languageName: unknown
   linkType: soft
 
 "@kandy-io/link-config-uae@workspace:packages/link-config-uae":
   version: 0.0.0-use.local
   resolution: "@kandy-io/link-config-uae@workspace:packages/link-config-uae"
+  dependencies:
+    jest: ^26.4.2
   languageName: unknown
   linkType: soft
 
 "@kandy-io/link-config-us@workspace:packages/link-config-us":
   version: 0.0.0-use.local
   resolution: "@kandy-io/link-config-us@workspace:packages/link-config-us"
+  dependencies:
+    jest: ^26.4.2
   languageName: unknown
   linkType: soft
 
 "@kandy-io/sdp-handlers@workspace:packages/sdp-handlers":
   version: 0.0.0-use.local
   resolution: "@kandy-io/sdp-handlers@workspace:packages/sdp-handlers"
+  dependencies:
+    jest: ^26.4.2
+    sdp-transform: ^2.14.0
   languageName: unknown
   linkType: soft
 
@@ -6733,6 +6742,15 @@ resolve@1.15.1:
   dependencies:
     xmlchars: ^2.2.0
   checksum: 6ad14be68da9b84af0fa3de346fd78bd3a8e8a73a462e2852279a1fff1e2619988919294001abe3ecef3783f9498962a0619d960ccca4ec2ca914526fde1acc2
+  languageName: node
+  linkType: hard
+
+"sdp-transform@npm:^2.14.0":
+  version: 2.14.0
+  resolution: "sdp-transform@npm:2.14.0"
+  bin:
+    sdp-verify: ./checker.js
+  checksum: 88ee0757f395ae51337e31e7732d429ef630bf0be2537c435af6bb79e9a47005bdcf244c5551cdbc2fa1374da038da41beb801843ecea56eab48285f1d9bbae2
   languageName: node
   linkType: hard
 

@@ -4,7 +4,7 @@ This package contains a collection of SDP Handlers that can be used with the Kan
 
 ## Compatiblity
 
-The SDP handlers in this library are compatible with the 3.x and 4.x versions of the Kandy.js SDK.
+The SDP handlers in this library are compatible with Kandy.js version 4.x and above.
 
 ## Installation
 

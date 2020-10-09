@@ -1,5 +1,3 @@
-const normalizeSdpHandler = require('./utils/normalizeSdpHandler')
-
 /**
  * Creates and returns an SDP Handler function that will remove the desired codecs
  *  from the SDP when passed to the pipeline.
@@ -15,14 +13,11 @@ const normalizeSdpHandler = require('./utils/normalizeSdpHandler')
  * const codecRemover = createCodecRemover(codecsToBeRemoved)
  * @return {Function} returns an SDP handler function
  */
-function createCodecRemover (codecs) {
-  if (!codecs) {
-    codecs = []
-  }
+function createCodecRemover (codecs = []) {
   // We allow the user to pass in a codecs of objects or strings, so here we format the strings into objects for uniformity.
   codecs = codecs.map(item => (typeof item === 'string' ? { name: item } : item))
 
-  return normalizeSdpHandler(function (newSdp, info, originalSdp) {
+  return function (newSdp, info, originalSdp) {
     // This is an array of strings representing codec names we want to remove.
     const codecStringsToRemove = codecs.map(codec => codec.name)
 
@@ -95,20 +90,16 @@ function createCodecRemover (codecs) {
       }
 
       // For each codec object, if the payload is in our filteredCodes list, we remove the object.
-      if (media.rtp) {
-        media.rtp = media.rtp.filter(rtp => !finalRemoveList.includes(rtp.payload))
-      }
+      media.rtp = media.rtp.filter(rtp => !finalRemoveList.includes(rtp.payload))
+      media.fmtp = media.fmtp.filter(fmtp => !finalRemoveList.includes(fmtp.payload))
 
-      if (media.fmtp) {
-        media.fmtp = media.fmtp.filter(fmtp => !finalRemoveList.includes(fmtp.payload))
-      }
       if (media.rtcpFb) {
         media.rtcpFb = media.rtcpFb.filter(rtcpFb => !finalRemoveList.includes(rtcpFb.payload))
       }
     })
 
     return newSdp
-  })
+  }
 }
 
 module.exports = createCodecRemover
