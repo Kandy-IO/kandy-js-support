@@ -1,19 +1,25 @@
 {
   "name": "@kandy-io/sdp-handlers",
+  "version": "1.0.0",
   "description": "A collection of SDP Handlers for the Kandy.js WebRTC SDK.",
-  "version": "1.0",
   "author": "Jean-Yves Boudreau (jean-yves.boudreau@kandy.io)",
   "license": "MIT",
-  "homepage": "https://github.com/Kandy-IO/kandy-js-support/tree/master/packages/sdp-handlers",
   "type": "module",
   "module": "./src/index.js",
   "exports": {
     "import": "./src/index.js"
   },
+  "homepage": "https://github.com/Kandy-IO/kandy-js-support/packages/sdp-handlers#readme",
   "repository": {
     "type": "git",
     "url": "git@github.com:Kandy-IO/kandy-js-support.git"
   },
+  "bugs": {
+    "url": "https://github.com/Kandy-IO/kandy-js-support/issues"
+  },
+  "files": [
+    "src/**/*"
+  ],
   "scripts": {
     "test": "jest"
   },
