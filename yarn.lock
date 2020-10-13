@@ -32,7 +32,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:^7.1.0, @babel/core@npm:^7.7.5":
+"@babel/core@npm:^7.1.0, @babel/core@npm:^7.11.6, @babel/core@npm:^7.7.5":
   version: 7.11.6
   resolution: "@babel/core@npm:7.11.6"
   dependencies:
@@ -105,7 +105,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/helper-module-transforms@npm:^7.11.0":
+"@babel/helper-module-transforms@npm:^7.10.4, @babel/helper-module-transforms@npm:^7.11.0":
   version: 7.11.0
   resolution: "@babel/helper-module-transforms@npm:7.11.0"
   dependencies:
@@ -332,6 +332,20 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0-0
   checksum: 2a50685d023bc609b01a3fd7ed3af03bc36c575da8d02199ed51cb24e8e068f26a128a20486cd502abe9e1d4c02e0264b8a58f1a5143e1291ca3508a948ada97
+  languageName: node
+  linkType: hard
+
+"@babel/plugin-transform-modules-commonjs@npm:^7.10.4":
+  version: 7.10.4
+  resolution: "@babel/plugin-transform-modules-commonjs@npm:7.10.4"
+  dependencies:
+    "@babel/helper-module-transforms": ^7.10.4
+    "@babel/helper-plugin-utils": ^7.10.4
+    "@babel/helper-simple-access": ^7.10.4
+    babel-plugin-dynamic-import-node: ^2.3.3
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: 42176865089a2800e888c41beaf3688e00b9b71b5bc65ca238342c83e9d38ec141eaa405182688a8294b344cd8a7ed36ab2da2662c38a40e2c736fed48ae7178
   languageName: node
   linkType: hard
 
@@ -649,6 +663,15 @@ __metadata:
   checksum: 151547a8fd46cad58a52fdeedec6a1102c8946bed0f48ae80e12329bcd58b54fd239f43c953f6b076d57abe8ffab25ecda6acc837409e4ae0bcab247847da976
   languageName: node
   linkType: hard
+
+"@kandy-io/dev-config@workspace:packages/dev-config":
+  version: 0.0.0-use.local
+  resolution: "@kandy-io/dev-config@workspace:packages/dev-config"
+  dependencies:
+    jest: ^26.4.2
+    sdp-transform: ^2.14.0
+  languageName: unknown
+  linkType: soft
 
 "@kandy-io/link-config-emea@workspace:packages/link-config-emea":
   version: 0.0.0-use.local
@@ -1296,6 +1319,15 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0
   checksum: 8960dd73e3c5e13227b7abe00c9f1858fdf73fb6894ab04ec3797572125afd4e5dfdd1f70aca84811cd0f762927ef85a7b77dca87013d0d51b2f4486cecefb26
+  languageName: node
+  linkType: hard
+
+"babel-plugin-dynamic-import-node@npm:^2.3.3":
+  version: 2.3.3
+  resolution: "babel-plugin-dynamic-import-node@npm:2.3.3"
+  dependencies:
+    object.assign: ^4.1.0
+  checksum: 6745b8edca96f6c8bc34ab65935b5676358d2e55323e8e823b8de7aa353e3e6398a495ce434c9c36ad5fb1609467a1b1a0028946e1490bf7de8f97df3ae7f3b1
   languageName: node
   linkType: hard
 
@@ -4691,6 +4723,9 @@ fsevents@^2.1.2:
   version: 0.0.0-use.local
   resolution: "kandy-js@workspace:."
   dependencies:
+    "@babel/core": ^7.11.6
+    "@babel/plugin-transform-modules-commonjs": ^7.10.4
+    "@kandy-io/dev-config": "workspace:packages/dev-config"
     husky: ^4.3.0
     jest: ^26.4.2
     lint-staged: ^10.4.0

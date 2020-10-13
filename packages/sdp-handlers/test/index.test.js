@@ -1,5 +1,5 @@
-const { expect } = require('@jest/globals')
-const index = require('../src/index.js')
+import { test, expect } from '@jest/globals'
+import * as index from '../src/index.js'
 
 test('Exports the correct list of functions', () => {
   expect(Object.keys(index)).toMatchInlineSnapshot(`

@@ -1,4 +1,4 @@
-exports.NORMAL = `v=0
+export const NORMAL = `v=0
 o=- 965538314742732736 2 IN IP4 127.0.0.1
 s=-
 t=0 0
@@ -110,7 +110,7 @@ a=ice-options:trickle
 a=rtcp-mux
 a=rtcp-rsize`
 
-exports.ONE_PAYLOAD = `v=0
+export const ONE_PAYLOAD = `v=0
 o=- 965538314742732736 2 IN IP4 127.0.0.1
 s=-
 t=0 0
@@ -210,7 +210,7 @@ a=ice-options:trickle
 a=rtcp-mux
 a=rtcp-rsize`
 
-exports.NO_PAYLOAD = `v=0
+export const NO_PAYLOAD = `v=0
 o=- 965538314742732736 2 IN IP4 127.0.0.1
 s=-
 t=0 0

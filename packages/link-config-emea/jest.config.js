@@ -1,7 +1,8 @@
-module.exports = {
+export default {
   clearMocks: true,
   collectCoverage: true,
   collectCoverageFrom: ['src/**/*.js', '!**/node_modules/**'],
   coverageDirectory: 'coverage',
-  testMatch: ['**/test/**/*.test.js']
+  testMatch: ['**/test/**/*.test.js'],
+  transform: { '^.+\\.js$': 'babel-jest' }
 }

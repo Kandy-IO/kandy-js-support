@@ -13,7 +13,7 @@
  * const codecRemover = createCodecRemover(codecsToBeRemoved)
  * @return {Function} returns an SDP handler function
  */
-function createCodecRemover (codecs = []) {
+export function createCodecRemover (codecs = []) {
   // We allow the user to pass in a codecs of objects or strings, so here we format the strings into objects for uniformity.
   codecs = codecs.map(item => (typeof item === 'string' ? { name: item } : item))
 
@@ -101,5 +101,3 @@ function createCodecRemover (codecs = []) {
     return newSdp
   }
 }
-
-module.exports = createCodecRemover
