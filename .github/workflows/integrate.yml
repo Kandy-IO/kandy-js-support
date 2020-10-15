@@ -22,5 +22,5 @@ jobs:
         run: yarn test
       - name: Format
         run: yarn format
-      - name: Link
+      - name: Lint
         run: yarn lint
