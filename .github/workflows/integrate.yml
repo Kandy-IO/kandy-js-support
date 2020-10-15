@@ -1,0 +1,26 @@
+name: CI Workflow
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the codebase.
+      - uses: actions/checkout@v2
+      # Setup the node environment.
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      # Setup the repo dependencies.
+      - name: Install Dependencies
+        run: yarn install
+      # Run the verify steps.
+      - name: Test
+        run: yarn test
+      - name: Format
+        run: yarn format
+      - name: Link
+        run: yarn lint
