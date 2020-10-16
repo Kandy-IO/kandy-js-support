@@ -2,6 +2,10 @@
 
 Here you can find many supporting libraries for the Kandy.js WebRTC SDK.
 
+![Integration](https://github.com/Kandy-IO/kandy-js-support/workflows/CI%20Workflow/badge.svg?branch=master)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![code format: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
+
 ## Libraries
 
 Navigate to each library to learn about usage and other details.
