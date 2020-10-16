@@ -9,7 +9,7 @@
 
 ### Fixed
 
-- Fixed the import statement as part of example code used in README.
+- Fixed the import statement of the example code in the README.
 
 ## 1.0.0
 
