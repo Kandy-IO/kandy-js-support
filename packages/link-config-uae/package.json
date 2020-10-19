@@ -23,7 +23,11 @@
   "scripts": {
     "test": "jest"
   },
+  "dependencies": {
+    "@kandy-io/sdp-handlers": "workspace:packages/sdp-handlers"
+  },
   "devDependencies": {
-    "jest": "^26.4.2"
+    "jest": "^26.4.2",
+    "sdp-transform": "2.14.0"
   }
 }
