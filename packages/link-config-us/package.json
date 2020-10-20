@@ -5,9 +5,13 @@
   "author": "Jean-Yves Boudreau (jean-yves.boudreau@kandy.io)",
   "license": "MIT",
   "type": "module",
+  "main": "./dist/index.umd.js",
   "module": "./src/index.js",
   "exports": {
-    "import": "./src/index.js"
+    ".": {
+      "import": "./src/index.js",
+      "require": "./dist/index.umd.js"
+    }
   },
   "homepage": "https://github.com/Kandy-IO/kandy-js-support/packages/link-config-us#readme",
   "repository": {
@@ -18,12 +22,15 @@
     "url": "https://github.com/Kandy-IO/kandy-js-support/issues"
   },
   "files": [
-    "src/**/*"
+    "src/**/*",
+    "dist/**/*"
   ],
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "prepack": "rollup ./src/index.js -f umd -n \"Kandy.support.us\" --extend -o ./dist/index.umd.js"
   },
   "devDependencies": {
-    "jest": "^26.4.2"
+    "jest": "^26.4.2",
+    "rollup": "^2.32.0"
   }
 }
