@@ -51,6 +51,4 @@ const config = {
   }
 }
 
-export const __testonly__ = { removeCodecsOnSetLocalOffer }
-
 export { config }

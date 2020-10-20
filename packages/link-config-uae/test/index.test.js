@@ -1,8 +1,6 @@
-import { config, __testonly__ } from '../src/index'
+import { config } from '../src/index'
 import { NORMAL } from './support/sdp.fixture'
 import { parse as createSdpObject } from 'sdp-transform'
-
-const { removeCodecsOnSetLocalOffer } = __testonly__
 
 test('Configuration object test', () => {
   expect(config).toMatchInlineSnapshot(`
@@ -42,6 +40,7 @@ test('Configuration object test', () => {
 })
 
 test('removeCodecsOnSetLocalOffer returns the newSdp if info shows the operation is not a local offer set', () => {
+  const removeCodecsOnSetLocalOffer = config.call.sdpHandlers[0]
   const newSdp = 'newSdp'
   const info = {
     step: 'set',
@@ -54,17 +53,19 @@ test('removeCodecsOnSetLocalOffer returns the newSdp if info shows the operation
 })
 
 test('removeCodecsOnSetLocalOffer calls the codecRemover handler if info shows the operation is a local offer set', () => {
-  const currentSdp = createSdpObject(NORMAL)
-  const newSdp = JSON.parse(JSON.stringify(currentSdp))
+  const removeCodecsOnSetLocalOffer = config.call.sdpHandlers[0]
+
+  const newSdp = createSdpObject(NORMAL)
   const info = {
     endpoint: 'local',
     step: 'set',
     type: 'offer'
   }
   const originalSdp = createSdpObject(NORMAL)
-  const sdp = removeCodecsOnSetLocalOffer(newSdp, info, originalSdp)
-  expect(sdp).toEqual(newSdp)
 
+  const sdp = removeCodecsOnSetLocalOffer(newSdp, info, originalSdp)
+
+  // Removes the audio codecs
   const audioPayloadList = sdp.media[0].payloads.split(' ')
   expect(audioPayloadList.includes('9')).toBe(false) // G722 codec removed
   expect(audioPayloadList.includes('13')).toBe(false) // CN codec removed
@@ -75,7 +76,7 @@ test('removeCodecsOnSetLocalOffer calls the codecRemover handler if info shows t
   expect(audioPayloadList.includes('111')).toBe(false) // opus codec removed
   expect(audioPayloadList.length).toEqual(6)
 
-  // Removes VP8 and VP9 Codecs
+  // Removes VP8 and VP9 Video Codecs
   const videoPayloadList = sdp.media[1].payloads.split(' ')
   expect(videoPayloadList.includes('96')).toBe(false)
   expect(videoPayloadList.includes('97')).toBe(false)
