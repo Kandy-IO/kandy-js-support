@@ -669,6 +669,7 @@ __metadata:
   resolution: "@kandy-io/link-config-emea@workspace:packages/link-config-emea"
   dependencies:
     jest: ^26.4.2
+    rollup: ^2.32.0
   languageName: unknown
   linkType: soft
 
@@ -677,6 +678,7 @@ __metadata:
   resolution: "@kandy-io/link-config-uae@workspace:packages/link-config-uae"
   dependencies:
     jest: ^26.4.2
+    rollup: ^2.32.0
   languageName: unknown
   linkType: soft
 
@@ -685,6 +687,7 @@ __metadata:
   resolution: "@kandy-io/link-config-us@workspace:packages/link-config-us"
   dependencies:
     jest: ^26.4.2
+    rollup: ^2.32.0
   languageName: unknown
   linkType: soft
 
@@ -693,6 +696,7 @@ __metadata:
   resolution: "@kandy-io/sdp-handlers@workspace:packages/sdp-handlers"
   dependencies:
     jest: ^26.4.2
+    rollup: ^2.32.0
     sdp-transform: ^2.14.0
   languageName: unknown
   linkType: soft
@@ -3063,7 +3067,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-fsevents@^2.1.2:
+"fsevents@^2.1.2, fsevents@~2.1.2":
   version: 2.1.3
   resolution: "fsevents@npm:2.1.3"
   dependencies:
@@ -3072,7 +3076,7 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"fsevents@patch:fsevents@^2.1.2#builtin<compat/fsevents>":
+"fsevents@patch:fsevents@^2.1.2#builtin<compat/fsevents>, fsevents@patch:fsevents@~2.1.2#builtin<compat/fsevents>":
   version: 2.1.3
   resolution: "fsevents@patch:fsevents@npm%3A2.1.3#builtin<compat/fsevents>::version=2.1.3&hash=127e8e"
   dependencies:
@@ -6679,6 +6683,20 @@ resolve@1.15.1:
   bin:
     rimraf: bin.js
   checksum: f0de3e445581e64a8a077af476cc30708e659f5779ec2ca2a161556d0792aa318a685923798ae22055b4ecd02b9aff444ef619578f7af53cf8e0e248031e3dee
+  languageName: node
+  linkType: hard
+
+"rollup@npm:^2.32.0":
+  version: 2.32.0
+  resolution: "rollup@npm:2.32.0"
+  dependencies:
+    fsevents: ~2.1.2
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  bin:
+    rollup: dist/bin/rollup
+  checksum: dfe2615c617a77618a3310ac8c7276c6db2445d0b2f1a3e90e7f4e53a30d0f35da70985d37a3a6de89c343d4940562a61ef72013a31534a056fca183d3dc0c57
   languageName: node
   linkType: hard
 
