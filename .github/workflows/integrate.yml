@@ -21,7 +21,7 @@ jobs:
         run: yarn install
       # Prepack
       - name: Prepack
-        run: yarn workspace sdp-handlers prepack
+        run: yarn workspace @kandy-io/sdp-handlers prepack
       # Run the verify steps.
       - name: Test
         run: yarn test
