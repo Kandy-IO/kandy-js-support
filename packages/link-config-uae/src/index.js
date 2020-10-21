@@ -1,4 +1,4 @@
-import { createCodecRemover } from '@kandy-io/sdp-handlers/src'
+import { createCodecRemover } from '@kandy-io/sdp-handlers'
 
 const codecRemover = createCodecRemover([
   'VP8',
