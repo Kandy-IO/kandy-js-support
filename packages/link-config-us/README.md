@@ -32,7 +32,7 @@ const client = create(config)
 The configuration object can also be used as a base for your own custom configuration.
 
 ```javascript
-import { config : defaultConfig } from '@kandy-io/link-config-us'
+import { config as defaultConfig } from '@kandy-io/link-config-us'
 import { create } from '@kandy-io/link-sdk'
 
 const config = {

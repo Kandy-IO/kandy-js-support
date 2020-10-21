@@ -1,6 +1,8 @@
 node_modules
 coverage
-dist
+
+**/dist/*
+!**/dist/package.json
 
 .yarn/*
 !.yarn/releases
