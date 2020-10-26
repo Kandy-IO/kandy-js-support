@@ -1,3 +1,25 @@
+import { createCodecRemover } from '@kandy-io/sdp-handlers'
+
+const codecRemover = createCodecRemover([
+  'VP8',
+  'VP9',
+  'opus',
+  'CN',
+  'G722',
+  'ISAC',
+  {
+    name: 'H264',
+    fmtpParams: ['packetization-mode=0']
+  }
+])
+
+const removeCodecsOnSetLocalOffer = (newSdp, info, originalSdp) => {
+  if (info.endpoint === 'local' && info.step === 'set' && info.type.toLowerCase() === 'offer') {
+    return codecRemover(newSdp, info, originalSdp)
+  }
+  return newSdp
+}
+
 const config = {
   authentication: {
     server: {
@@ -23,7 +45,9 @@ const config = {
       {
         url: 'stun:ct-turn2.etisalat.ae:3478?transport=udp'
       }
-    ]
+    ],
+    removeH264Codecs: false,
+    sdpHandlers: [removeCodecsOnSetLocalOffer]
   }
 }
 

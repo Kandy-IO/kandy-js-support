@@ -5,8 +5,7 @@
   "author": "Jean-Yves Boudreau (jean-yves.boudreau@kandy.io)",
   "license": "MIT",
   "type": "module",
-  "main": "./dist/index.umd.js",
-  "module": "./src/index.js",
+  "main": "./src/index.js",
   "exports": {
     ".": {
       "import": "./src/index.js",
@@ -29,8 +28,12 @@
     "test": "jest",
     "prepack": "rollup ./src/index.js -f umd -n \"Kandy.support.uae\" --extend -o ./dist/index.umd.js"
   },
+  "dependencies": {
+    "@kandy-io/sdp-handlers": "workspace:packages/sdp-handlers"
+  },
   "devDependencies": {
     "jest": "^26.4.2",
-    "rollup": "^2.32.0"
+    "rollup": "^2.32.0",
+    "sdp-transform": "2.14.0"
   }
 }
