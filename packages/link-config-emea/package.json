@@ -5,8 +5,7 @@
   "author": "Jean-Yves Boudreau (jean-yves.boudreau@kandy.io)",
   "license": "MIT",
   "type": "module",
-  "main": "./dist/index.umd.js",
-  "module": "./src/index.js",
+  "main": "./src/index.js",
   "exports": {
     ".": {
       "import": "./src/index.js",

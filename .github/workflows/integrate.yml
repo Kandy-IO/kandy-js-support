@@ -19,9 +19,6 @@ jobs:
       # Setup the repo dependencies.
       - name: Install Dependencies
         run: yarn install
-      # Prepack
-      - name: Prepack
-        run: yarn workspace @kandy-io/sdp-handlers prepack
       # Run the verify steps.
       - name: Test
         run: yarn test
