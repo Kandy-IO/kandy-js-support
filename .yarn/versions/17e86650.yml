@@ -1,5 +1,0 @@
-releases:
-  "@kandy-io/link-config-emea": minor
-  "@kandy-io/link-config-uae": minor
-  "@kandy-io/link-config-us": minor
-  "@kandy-io/sdp-handlers": minor
