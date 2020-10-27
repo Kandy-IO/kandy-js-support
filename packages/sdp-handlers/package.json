@@ -1,6 +1,6 @@
 {
   "name": "@kandy-io/sdp-handlers",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A collection of SDP Handlers for the Kandy.js WebRTC SDK.",
   "author": "Jean-Yves Boudreau (jean-yves.boudreau@kandy.io)",
   "license": "MIT",

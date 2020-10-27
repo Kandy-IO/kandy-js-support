@@ -1,6 +1,6 @@
 {
   "name": "@kandy-io/link-config-uae",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Kandy.js UAE Configuration",
   "author": "Jean-Yves Boudreau (jean-yves.boudreau@kandy.io)",
   "license": "MIT",
@@ -26,12 +26,14 @@
   ],
   "scripts": {
     "test": "jest",
-    "prepack": "rollup ./src/index.js -f umd -n \"Kandy.support.uae\" --extend -o ./dist/index.umd.js"
+    "prepack": "rollup ./src/index.js -f umd -n \"Kandy.support.uae\" --extend -p commonjs -p node-resolve -o ./dist/index.umd.js"
   },
   "dependencies": {
     "@kandy-io/sdp-handlers": "workspace:packages/sdp-handlers"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
     "jest": "^26.4.2",
     "rollup": "^2.32.0",
     "sdp-transform": "2.14.0"

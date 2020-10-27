@@ -5,13 +5,17 @@
 - This project adheres to [Semantic Versioning](http://semver.org/).
 - This change log follows [keepachangelog.com](http://keepachangelog.com/) recommendations.
 
-## Unreleased
+## 1.1.0 - 2020-10-27
 
-### Fixed
+### Added
 
-- Fixed the import statement as part of example code used in README.
+- Added CommonJS version which should allow this package to be required instead of imported.
 
-## 1.0.0
+### Changed
+
+- Fixed the import statement of the example code in the README.
+
+## 1.0.0 - 2020-10-13
 
 ### Added
 
