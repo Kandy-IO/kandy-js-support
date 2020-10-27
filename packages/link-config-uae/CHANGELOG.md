@@ -15,7 +15,7 @@
 
 - Set the `removeH264Codecs` setting to `false` in the call config.
 - Added an SDP handler that will remove certain codecs when setting local offers in the call config.
-- Updated unit tests for the newly added stuff
+- Updated unit tests for the newly added changes.
 - Fixed the import statement as part of example code used in README.
 
 ## 1.0.0 - 2020-10-13
