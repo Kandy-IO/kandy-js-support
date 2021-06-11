@@ -17,7 +17,7 @@ test('Configuration object test', () => {
             "url": "turns:turn-na-2.kandy.io:443?transport=tcp",
           },
           Object {
-            "url": "turn-na-1.kandy.io:3478?transport=udp",
+            "url": "stun:turn-na-1.kandy.io:3478?transport=udp",
           },
           Object {
             "url": "stun:turn-na-2.kandy.io:3478?transport=udp",
