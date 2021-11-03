@@ -32,20 +32,22 @@ const config = {
     }
   },
   call: {
-    iceserver: [
-      {
-        url: 'turns:ct-turn1.etisalat.ae:443?transport=tcp'
-      },
-      {
-        url: 'turns:ct-turn2.etisalat.ae:443?transport=tcp'
-      },
-      {
-        url: 'stun:ct-turn1.etisalat.ae:3478?transport=udp'
-      },
-      {
-        url: 'stun:ct-turn2.etisalat.ae:3478?transport=udp'
-      }
-    ],
+    defaultPeerConfig: {
+      iceServers: [
+        {
+          urls: ['turns:ct-turn1.etisalat.ae:443?transport=tcp']
+        },
+        {
+          urls: ['turns:ct-turn2.etisalat.ae:443?transport=tcp']
+        },
+        {
+          urls: ['stun:ct-turn1.etisalat.ae:3478?transport=udp']
+        },
+        {
+          urls: ['stun:ct-turn2.etisalat.ae:3478?transport=udp']
+        }
+      ]
+    },
     removeH264Codecs: false,
     sdpHandlers: [removeCodecsOnSetLocalOffer]
   }
