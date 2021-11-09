@@ -10,20 +10,22 @@ const config = {
     }
   },
   call: {
-    iceserver: [
-      {
-        url: 'turns:turn-na-1.kandy.io:443?transport=tcp'
-      },
-      {
-        url: 'turns:turn-na-2.kandy.io:443?transport=tcp'
-      },
-      {
-        url: 'stun:turn-na-1.kandy.io:3478?transport=udp'
-      },
-      {
-        url: 'stun:turn-na-2.kandy.io:3478?transport=udp'
-      }
-    ]
+    defaultPeerConfig: {
+      iceServers: [
+        {
+          urls: ['turns:turn-na-1.kandy.io:443?transport=tcp']
+        },
+        {
+          urls: ['turns:turn-na-2.kandy.io:443?transport=tcp']
+        },
+        {
+          urls: ['stun:turn-na-1.kandy.io:3478?transport=udp']
+        },
+        {
+          urls: ['stun:turn-na-2.kandy.io:3478?transport=udp']
+        }
+      ]
+    }
   }
 }
 

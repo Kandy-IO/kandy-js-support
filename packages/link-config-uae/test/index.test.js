@@ -11,20 +11,30 @@ test('Configuration object test', () => {
         },
       },
       "call": Object {
-        "iceserver": Array [
-          Object {
-            "url": "turns:ct-turn1.etisalat.ae:443?transport=tcp",
-          },
-          Object {
-            "url": "turns:ct-turn2.etisalat.ae:443?transport=tcp",
-          },
-          Object {
-            "url": "stun:ct-turn1.etisalat.ae:3478?transport=udp",
-          },
-          Object {
-            "url": "stun:ct-turn2.etisalat.ae:3478?transport=udp",
-          },
-        ],
+        "defaultPeerConfig": Object {
+          "iceServers": Array [
+            Object {
+              "urls": Array [
+                "turns:ct-turn1.etisalat.ae:443?transport=tcp",
+              ],
+            },
+            Object {
+              "urls": Array [
+                "turns:ct-turn2.etisalat.ae:443?transport=tcp",
+              ],
+            },
+            Object {
+              "urls": Array [
+                "stun:ct-turn1.etisalat.ae:3478?transport=udp",
+              ],
+            },
+            Object {
+              "urls": Array [
+                "stun:ct-turn2.etisalat.ae:3478?transport=udp",
+              ],
+            },
+          ],
+        },
         "removeH264Codecs": false,
         "sdpHandlers": Array [
           [Function],
