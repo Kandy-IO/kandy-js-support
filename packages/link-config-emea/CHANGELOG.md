@@ -5,7 +5,7 @@
 - This project adheres to [Semantic Versioning](http://semver.org/).
 - This change log follows [keepachangelog.com](http://keepachangelog.com/) recommendations.
 
-## 1.2.1 - 2021-11-03
+## 2.0.0 - 2021-11-09
 
 ### Changed
 

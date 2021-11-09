@@ -5,11 +5,12 @@
 - This project adheres to [Semantic Versioning](http://semver.org/).
 - This change log follows [keepachangelog.com](http://keepachangelog.com/) recommendations.
 
-## 1.2.1 - 2021-11-03
+## 2.0.0 - 2021-11-09
 
 ### Changed
 
 - Moved the location of ICE servers configuration within the overall configuration object, so that they are now part of a new property `defaultPeerConfig`. This new property will represent configuration for a native peer connection, thus it ensures support for full configuration on a given RTCPeerConnection. See [RTCPeerConfiguration properties](https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection). `KJS-379`
+
 ## 1.1.0 - 2020-10-27
 
 ### Added
