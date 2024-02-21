@@ -41,10 +41,10 @@ const config = {
           urls: ['turns:ct-turn2.etisalat.ae:443?transport=tcp']
         },
         {
-          urls: ['stun:ct-turn1.etisalat.ae:3478?transport=udp']
+          urls: ['stun:ct-turn1.etisalat.ae:3478']
         },
         {
-          urls: ['stun:ct-turn2.etisalat.ae:3478?transport=udp']
+          urls: ['stun:ct-turn2.etisalat.ae:3478']
         }
       ]
     },
